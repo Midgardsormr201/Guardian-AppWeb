@@ -1,23 +1,35 @@
-import logo from './logo.svg';
+import logo from './GuardianIcon.png';
 import './App.css';
 
 function App() {
   return (
+    
     <div className="App">
-      <header className="App-header">
+      <h1 className="Titulo">GUARDIAN
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React xd
-        </a>
-      </header>
+      
+      
+      </h1>
+      <header class="Eslogan">Tu web segura</header>
+      <nav class="menuPaginaPrincipal">
+                <div class="contenedorMenu">
+                    <ul>
+                        <li>
+                            <a href="inicio.html">Inicio</a>
+                        </li>
+                        
+                        <li>
+                            <a href="quienes-somos.html">¿Quiénes somos?</a>
+                        </li>
+                        <li>
+                            <a href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+      
+      
+        
     </div>
   );
 }
