@@ -1,4 +1,4 @@
-import logo from './GuardianIcon.png';
+import logo from './LogoGuardian.png';
 import './App.css';
 
 function App() {
@@ -7,8 +7,6 @@ function App() {
     <div className="App">
       <h1 className="Titulo">GUARDIAN
         <img src={logo} className="App-logo" alt="logo" />
-      
-      
       </h1>
       <header class="Eslogan">Tu web segura</header>
       <nav class="menuPaginaPrincipal">
@@ -17,19 +15,13 @@ function App() {
                         <li>
                             <a href="inicio.html">Inicio</a>
                         </li>
-                        
                         <li>
-                            <a href="quienes-somos.html">¿Quiénes somos?</a>
-                        </li>
-                        <li>
-                            <a href="contacto.html">Contacto</a>
+                            <a href="quienes-somos.html">¿Quienes somos?</a>
+                            
                         </li>
                     </ul>
                 </div>
-            </nav>
-      
-      
-        
+        </nav>
     </div>
   );
 }
