@@ -1,0 +1,78 @@
+.App {
+  text-align: center;
+  background: #67B26F;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #4ca2cd, #67B26F);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #4ca2cd, #67B26F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+
+.App-logo {
+  height: 6vmin;
+  pointer-events: none;
+}
+
+body{
+  background: #67B26F;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #4ca2cd, #67B26F);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #4ca2cd, #67B26F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.Titulo{
+  font-family: 'Dancing Script', cursive;
+  font-family: 'Lobster', cursive;
+  font-family: 'Russo One', sans-serif;
+  padding-top: 10px;
+  padding-left: 25px; 
+}
+
+.Eslogan{
+  padding-bottom: 15px;
+  font-family: 'Dancing Script', cursive;
+  font-family: 'Fugaz One', cursive;
+  font-family: 'Lobster', cursive;
+  font-family: 'Russo One', sans-serif;
+}
+
+.menuPaginaPrincipal{
+  width: 100%;
+  background: #ffffff;
+  text-align: center;
+}
+
+.contenedorMenu{
+  width: 80%;
+  margin: 0 auto;
+
+}
+
+.menuPaginaPrincipal ul{
+  list-style: none;
+}
+
+.menuPaginaPrincipal ul li{
+  display: inline-block;
+  padding: 10px;
+  transition: all .3s ease;
+}
+
+.menuPaginaPrincipal ul li:hover{
+  transform: scale(1.2);
+  background: #37c0e9;
+}
+
+.menuPaginaPrincipal ul li a{
+  color: rgb(5, 5, 5);
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
