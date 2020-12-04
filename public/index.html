@@ -30,7 +30,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Fugaz+One&family=Lobster&family=Russo+One&display=swap" rel="stylesheet">
     <style>
-      #map { 
+      #map {
       width: 80%;
       height: 700px;
       box-shadow: 5px 5px 5px 8px #888;
@@ -38,28 +38,36 @@
       margin:auto;
    }
     </style>
+    <!– links de leafletjs –>
     <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+    <!– links de leafletjs –>
+
+    <!– links del geolocalizador–>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@[VERSION]/dist/L.Control.Locate.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js" charset="utf-8"></script>
+    <!– links del geolocalizador–>
   </head>
   <body>
-    
-    
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <div id = 'map'>
     </div>
     <script>
-      var map = L.map('map').
-        setView([-33.437280, -70.634356],
-        17);
+      var map = L.map('map').setView([-33.437280, -70.634356],17);
+      var lc = L.control.locate({
+      position: 'topleft',
+      setView: 'always',
+      strings: {
+            title: "Muestrame donde estoy!"
+          }
+      }).addTo(map);
       L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: 'Map data &copy; <a href="http://openstreetmap.org/%22%3EOpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/%22%3ECC-BY-SA</a>, Imagery © <a href="http://cloudmade.com/%22%3ECloudMade</a>',
       maxZoom: 18
       }).addTo(map);
-      L.control.scale().addTo(map);
 
-      L.marker([-33.437280, -70.634356],{draggable: true}).addTo(map);
-    
     </script>
     <!--
       This HTML file is a template.
@@ -71,6 +79,6 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    
+
   </body>
 </html>
