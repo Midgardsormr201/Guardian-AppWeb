@@ -19,6 +19,12 @@ function App() {
                             <a href="quienes-somos.html">¿Quienes somos?</a>
                             
                         </li>
+                        <li>
+                            <a href="reportes.html">Hacer un Reporte</a>
+                        </li>
+                        <li>
+                            <a href="login.html">Mi Cuenta</a>
+                        </li>
                     </ul>
                 </div>
         </nav>
