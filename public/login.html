@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
+	<link rel="stylesheet" href="/src/estilo.css">
+
+
+</head>
+<body>
+ <form class="formulario">
+
+    <h1>Iniciar Sesión</h1>
+     <div class="contenedor">
+         <div class="input-contenedor">
+         <i class="fas fa-envelope icon"></i>
+         <input type="text" placeholder="Correo Electrónico">
+
+         </div>
+
+         <div class="input-contenedor">
+        <i class="fas fa-key icon"></i>
+         <input type="password" placeholder="Contraseña">
+
+         </div>
+         <input type="submit" value="Iniciar sesión" class="button">
+         <p>¿No tienes cuenta?<a class="link" href="registro.html"> Registrate</a></p>
+     </div>
+    </form>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            background: url(fondo.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+            background: #67B26F;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #4ca2cd, #67B26F);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #4ca2cd, #67B26F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+        * {
+        box-sizing: border-box;
+        }
+        .contenedor{
+            width: 100%;
+            padding: 15px;
+        }
+        .formulario{
+            background: #fff;
+            margin-top: 150px;
+            padding: 3px;
+        }
+        h1{
+            text-align: center;
+            color: #1a2537;
+            font-size: 40px;
+        }
+        input[type="text"],
+        input[type="password"]{
+            font-size: 20px;
+            width: 82%;
+            padding: 10px;
+            border: none;
+        }
+        .input-contenedor{
+            margin-bottom: 15px;
+            border: 1px solid #aaa;
+        }
+        .icon{
+            min-width: 50px;
+            text-align: center;
+            color: #999;
+        }
+        .button{
+            border: none;
+            width: 100%;
+            color: white;
+            font-size: 20px;
+            background:  #1a2537;
+            padding: 15px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover{
+            background: cadetblue;
+        }
+        p{
+            text-align: center;
+        }
+        .link{
+            text-decoration: none;
+            color: #1a2537;
+            font-weight: 600;
+        }
+        .link:hover{
+            color: cadetblue;
+        }
+        @media(min-width:768px)
+        {
+            .formulario{
+                margin: auto;
+                width: 500px;
+                margin-top: 150px;
+                border-radius: 2%;
+            }
+        }
+
+    </style>
+</body>
+</html>
