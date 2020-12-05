@@ -33,7 +33,8 @@
       #map {
       width: 80%;
       height: 700px;
-      box-shadow: 5px 5px 5px 8px #888;
+      border: 3px solid black;
+      border-radius: 10px;
       display:block;
       margin:auto;
    }
@@ -48,14 +49,18 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@[VERSION]/dist/L.Control.Locate.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js" charset="utf-8"></script>
     <!– links del geolocalizador–>
+    <link rel="stylesheet" href="Control.Coordinates.css" />
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <div id = 'map'>
-    </div>
+    <div id = 'map'></div>
+    <!– links del geolocalizador–>
+    <script src="Control.Coordinates.js"></script>
+    <!– links del geolocalizador–>
     <script>
       var map = L.map('map').setView([-33.437280, -70.634356],17);
+      //Función geolocalizador
       var lc = L.control.locate({
       position: 'topleft',
       setView: 'always',
@@ -63,11 +68,19 @@
             title: "Muestrame donde estoy!"
           }
       }).addTo(map);
+      //Función geolocalizador
       L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: 'Map data &copy; <a href="http://openstreetmap.org/%22%3EOpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/%22%3ECC-BY-SA</a>, Imagery © <a href="http://cloudmade.com/%22%3ECloudMade</a>',
       maxZoom: 18
       }).addTo(map);
-
+      //Función coordenadas
+  		var c = new L.Control.Coordinates();
+  		c.addTo(map);
+  		function onMapClick(e) {
+  			c.setCoordinates(e);
+  		}
+  		map.on('click', onMapClick);
+      //Función coordenadas
     </script>
     <!--
       This HTML file is a template.
