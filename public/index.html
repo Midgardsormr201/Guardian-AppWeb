@@ -50,14 +50,20 @@
     <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js" charset="utf-8"></script>
     <!– links del geolocalizador–>
     <link rel="stylesheet" href="Control.Coordinates.css" />
+    <script src="Control.Coordinates.js"></script>
+    <!– links del geolocalizador–>
+    <!– links del buscador –>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-geosearch@3.0.0/dist/geosearch.css"/>
+    <script src="https://unpkg.com/leaflet-geosearch@3.0.0/dist/geosearch.umd.js"></script>
+
+    <script src="https://rawgit.com/k4r573n/leaflet-control-osm-geocoder/master/Control.OSMGeocoder.js"></script>
+    <link rel="stylesheet" href="https://rawgit.com/k4r573n/leaflet-control-osm-geocoder/master/Control.OSMGeocoder.css" />
+    <!– links del buscador –>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <div id = 'map'></div>
-    <!– links del geolocalizador–>
-    <script src="Control.Coordinates.js"></script>
-    <!– links del geolocalizador–>
     <script>
       var map = L.map('map').setView([-33.437280, -70.634356],17);
       //Función geolocalizador
@@ -73,6 +79,7 @@
       attribution: 'Map data &copy; <a href="http://openstreetmap.org/%22%3EOpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/%22%3ECC-BY-SA</a>, Imagery © <a href="http://cloudmade.com/%22%3ECloudMade</a>',
       maxZoom: 18
       }).addTo(map);
+
       //Función coordenadas
   		var c = new L.Control.Coordinates();
   		c.addTo(map);
@@ -81,6 +88,16 @@
   		}
   		map.on('click', onMapClick);
       //Función coordenadas
+
+      //Función buscador
+      var osmGeocoder = new L.Control.OSMGeocoder({
+      placeholder: 'Buscar Ubicación',
+      text: 'Buscar',
+      collapsed: true,
+      position: 'topright',
+      });
+      map.addControl(osmGeocoder);
+      //Función buscador
     </script>
     <!--
       This HTML file is a template.
