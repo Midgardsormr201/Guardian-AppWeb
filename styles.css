@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}  
+}
 body{
     text-align: center;
     background: #67B26F;  /* fallback for old browsers */
@@ -17,7 +17,7 @@ body{
     justify-content: center;
 }
 .Inicio .Title, .Inicio .App-logo{
-    
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -54,7 +54,7 @@ body{
     background: #ffffff;
     text-align: center;
   }
-  
+
 .container {
     margin: auto;
 
@@ -72,7 +72,7 @@ body{
 .nav-main ul {
     list-style: none;
 
-    
+
 }
 
 .nav-main ul li {
@@ -92,18 +92,18 @@ body{
     text-decoration: none;
     padding-right: 10px;
     padding-left: 10px;
-    
+
 
 }
 
-#map-template {
-    
-    width: 80%;
-    height: 700px;
+#map{
+
+    width: 90%;
+    height: 750px;
     border: 3px solid black;
     border-radius: 10px;
     display:block;
-    margin: auto;
+    margin: 2% auto;
     padding: 20px 0px 0px 0px;
      }
 
@@ -112,7 +112,7 @@ body{
     line-height: 40px;
     padding: 50px 50px 50px 50px;
 
-        
+
 }
 .quienes-somos{
     text-align: center;
