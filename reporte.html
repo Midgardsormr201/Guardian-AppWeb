@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Fugaz+One&family=Lobster&family=Russo+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
+     
     
     <title>GUARDIAN</title>
 
     
-    
+</head>    
 <body>
     <div class="Inicio">
         <div style="float: left;" class="contenedor-texto">
@@ -60,9 +62,10 @@
                     <input type="longitud" placeholder="Ingrese Longitud" required>
         
                  </div>
-                 <div class="input-contenedor" >
-                    <i class="fas fa-comment-alt icon"></i>
-                    <input type="reporte"  placeholder="Detalles del reporte" required>
+                 <div>
+                     <h1>DETALLES</h1>
+                    
+                    <textarea name="textarea" rows="10" cols="32" ></textarea>
             
                 </div>
                 <div class="anonimo">
@@ -94,6 +97,15 @@
         .opciones{
             padding-bottom: 15px;
         }
+        textarea{
+            font-size: 2rem;
+            height: 5rem;
+            max-height: 15rem;
+            min-height: 15rem;
+            max-width: 29rem;
+            min-width: 29rem;
+
+        }
         
         .formulario{
             background: #fff;
@@ -105,6 +117,11 @@
             color: #1a2537;
             font-size: 40px;
         }
+        .input-contenedor1{
+            font-family: 'Courier New', Courier, monospace;
+
+
+        }
         input[type="latitud"],
         input[type="longitud"],
         input[type="reporte"]{
@@ -112,6 +129,9 @@
             width: 82%;
             padding: 10px;
             border: none;
+        }
+        input[type="reporte"]{
+            height: 100px;
         }
         .input-contenedor{
             margin-bottom: 15px;
@@ -158,5 +178,5 @@
         </style>
 
 </body>    
-</head>
+
 </html>    
