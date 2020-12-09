@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}  
+body{
+    text-align: center;
+    background: #67B26F;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4ca2cd, #67B26F);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4ca2cd, #67B26F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+.Inicio{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.Inicio .Title, .Inicio .App-logo{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+}
+.Title{
+    font-size: 60px;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Lobster', cursive;
+    font-family: 'Russo One', sans-serif;
+
+}
+
+
+.App-logo{
+    height: 100px;
+}
+
+
+
+.Eslogan{
+    padding-bottom: 30px;
+    padding-top: 20px;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Fugaz One', cursive;
+    font-family: 'Lobster', cursive;
+    font-family: 'Russo One', sans-serif;
+    font-size: 25px;
+
+}
+.menuPaginaPrincipal{
+    width: 90%;
+    background: #ffffff;
+    text-align: center;
+  }
+  
+.container {
+    margin: auto;
+
+
+}
+
+/* Estilos del menu de navegación*/
+
+.nav-main{
+    width: 100%;
+    background: #ffffff;
+    text-align: center;
+}
+
+.nav-main ul {
+    list-style: none;
+
+    
+}
+
+.nav-main ul li {
+    display: inline-block;
+    padding: 10px;
+    transition: all .3s ease;
+
+}
+
+.nav-main ul li:hover{
+    transform: scale(1.2);
+    background: #a6bfc7;
+  }
+
+.nav-main ul li a{
+    color: rgb(5, 5, 5);
+    text-decoration: none;
+    padding-right: 10px;
+    padding-left: 10px;
+    
+
+}
+
+#map-template {
+    
+    width: 80%;
+    height: 700px;
+    border: 3px solid black;
+    border-radius: 10px;
+    display:block;
+    margin: auto;
+    padding: 20px 0px 0px 0px;
+     }
+
+.Description{
+    text-align: center;
+    line-height: 40px;
+    padding: 50px 50px 50px 50px;
+
+        
+}
+.quienes-somos{
+    text-align: center;
+    padding-top: 50px;
+}

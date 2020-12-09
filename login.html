@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" type="LogoGuardian/png" href="LogoGuardian.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Fugaz+One&family=Lobster&family=Russo+One&display=swap" rel="stylesheet">
+    
+    <title>GUARDIAN</title>
+
+    
+    
+<body>
+    <div class="Inicio">
+        <div style="float: left;" class="contenedor-texto">
+            <h1 class="Title">GUARDIAN</h1>
+
+        </div>
+        <div class="contenedor-imagen">
+            <img src="LogoGuardian.png" class="App-logo" alt="logo" />
+        </div>
+    </div>    
+        
+    
+    
+      <header class="Eslogan">Tu web segura</header>
+      
+        <div class="container">
+            <nav class="nav-main">
+                <ul class="nav-menu">
+                    <li>
+                        <a href="index.html">INICIO</a>
+                    </li>
+                    <li>
+                        <a href="quienes-somos.html">QUIENES SOMOS</a>
+                    </li>
+                    <li>
+                        <a href="reporte.html">HACER REPORTE</a>
+                    </li>
+                    <li>
+                        <a href="login.html">MI CUENTA</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <form class="formulario">
+
+            <h1>Iniciar Sesión</h1>
+             <div class="contenedor">
+                 <div class="input-contenedor">
+                 <i class="fas fa-envelope icon"></i>
+                 <input type="text" placeholder="Correo Electrónico">
+        
+                 </div>
+        
+                 <div class="input-contenedor">
+                <i class="fas fa-key icon"></i>
+                 <input type="password" placeholder="Contraseña">
+        
+                 </div>
+                 <input type="submit" value="Iniciar sesión" class="button">
+                 <p>¿No tienes cuenta?<a class="link" href="registro.html"> Registrate</a></p>
+             </div>
+            </form>
+            
+            <style>
+                
+        * {
+        box-sizing: border-box;
+        }
+        .contenedor{
+            width: 100%;
+            padding: 15px;
+        }
+        .formulario{
+            background: #fff;
+            margin-top: 150px;
+            padding: 3px;
+        }
+        h1{
+            text-align: center;
+            color: #1a2537;
+            font-size: 40px;
+        }
+        input[type="text"],
+        input[type="password"]{
+            font-size: 20px;
+            width: 82%;
+            padding: 10px;
+            border: none;
+        }
+        .input-contenedor{
+            margin-bottom: 15px;
+            border: 1px solid #aaa;
+        }
+        .icon{
+            min-width: 50px;
+            text-align: center;
+            color: #999;
+        }
+        .button{
+            border: none;
+            width: 100%;
+            color: white;
+            font-size: 20px;
+            background:  #1a2537;
+            padding: 15px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover{
+            background: cadetblue;
+        }
+        p{
+            text-align: center;
+        }
+        .link{
+            text-decoration: none;
+            color: #1a2537;
+            font-weight: 600;
+        }
+        .link:hover{
+            color: cadetblue;
+        }
+        @media(min-width:768px)
+        {
+            .formulario{
+                margin: auto;
+                width: 500px;
+                margin-top: 150px;
+                border-radius: 2%;
+            }
+        }
+        </style>
+          
+
+</body>    
+</head>
+</html>    
