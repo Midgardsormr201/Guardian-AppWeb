@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="shortcut icon" type="LogoGuardian/png" href="{% static 'images/LogoGuardian.png' %}"/>
+        <title>GUARDIAN</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+        <link rel="stylesheet" href="{% static 'styles/login.css' %}">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Fugaz+One&family=Lobster&family=Russo+One&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
+    </head>
+    <body>
+        <div class="Inicio">
+            <div style="float: left;" class="contenedor-texto">
+                <h1 class="Title">GUARDIAN</h1>
+            </div>
+            <div class="contenedor-imagen">
+                <img src="{% static 'images/LogoGuardian.png' %}" class="App-logo" alt="logo"/>
+            </div>
+        </div>    
+        
+        <header class="Eslogan">Tu web segura</header>
+        
+        <div class="container">
+            <nav class="nav-main">
+                <ul class="nav-menu">
+                    <li>
+                        <a href="{% url 'index' %}">INICIO</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'quienes-somos' %}">QUIENES SOMOS</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'reporte' %}">HACER REPORTE</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'login' %}">MI CUENTA</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <form class="formulario" method="POST">{% csrf_token %}
+            <h1>Iniciar Sesión</h1>
+            <div class="contenedor">
+                <div class="input-contenedor">
+                    <i class="fas fa-user icon"></i>
+                    <input type="text" placeholder="nombre de usuario" name="username">
+                </div>
+                <div class="input-contenedor">
+                    <i class="fas fa-key icon"></i>
+                    <input type="password" placeholder="Contraseña" name="contraseña">
+                </div>
+                <input type="submit" value="Iniciar sesión" class="button">
+                <p>¿No tienes cuenta?<a class="link" href="{% url 'register' %}"> Registrate</a></p>
+            </div>
+        </form>
+    </body>
+</html>    

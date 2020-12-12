@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="shortcut icon" type="LogoGuardian/png" href="{% static 'images/LogoGuardian.png' %}"/>
+        <title>GUARDIAN</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+        <link rel="stylesheet" href="{% static 'styles/reporte.css' %}">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Fugaz+One&family=Lobster&family=Russo+One&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    </head>
+    <body>
+        <div class="Inicio">
+            <div style="float: left;" class="contenedor-texto">
+                <h1 class="Title">GUARDIAN</h1>
+            </div>
+            <div class="contenedor-imagen">
+                <img src="{% static 'images/LogoGuardian.png' %}" class="App-logo" alt="logo"/>
+            </div>
+        </div>
+
+        <header class="Eslogan">Tu web segura</header>
+        
+        <div class="container">
+            <nav class="nav-main">
+                <ul class="nav-menu">
+                    <li>
+                        <a href="{% url 'index' %}">INICIO</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'quienes-somos' %}">QUIENES SOMOS</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'reporte' %}">HACER REPORTE</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'login' %}">MI CUENTA</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <form class="formulario">{% csrf_token %}
+            <h1>REPORTAR</h1>
+            <div class="contenedor">
+                <div class="input-contenedor">
+                    <i class="fas fa-map-marker-alt icon"></i>
+                    <input type="latitud" placeholder="Ingrese Latitud" name="latitud" required>
+                </div>
+                <div class="input-contenedor">
+                    <i class="fas fa-map-marker-alt icon"></i>
+                    <input type="longitud" placeholder="Ingrese Longitud" name="longitud" required>
+                </div>
+                <div class="input-contenedor" >
+                    <i class="fas fa-comment-alt icon"></i>
+                    <input type="reporte"  placeholder="Detalles del reporte" name="Detalles" required>
+                </div>
+                <div class="anonimo">
+                    <h2 class="opciones">Su reporte es anonimo?</h2>
+                    <input type="radio" name="option" required value="1">SI
+                    <input type="radio" name="option" required value="1">NO
+                </div>
+                <input type="submit" value="Reportar" class="button">
+            </div>
+        </form>
+    </body>
+</html>    
