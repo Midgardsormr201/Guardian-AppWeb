@@ -43,7 +43,7 @@
                 </ul>
             </nav>
         </div>
-        <form class="formulario" method="POST" action="login/">
+        <form class="formulario" method="POST">
             {% csrf_token %}
             <h1>Registrate</h1>
             <div class="contenedor">
@@ -61,12 +61,15 @@
                 <div class="input-contenedor">
                     <i class="fas fa-key icon"></i>
                     {{form.password1}}
+                    <p>Al menos 8 carácteres</p>
                 </div>
                 <h4>Confirme contraseña</h4>
                 <div class="input-contenedor">
                     <i class="fas fa-key icon"></i>
                     {{form.password2}}
+                    <p>Al menos 8 carácteres</p>
                 </div>
+                {{form.errors}}
                 <input type="submit" value="Registrate" class="button">
                 <p>¿Ya tienes una cuenta?<a class="link" href="{% url 'login' %}"> Iniciar Sesion</a></p>
             </div>

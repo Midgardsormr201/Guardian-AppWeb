@@ -15,13 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from modulos.appforms.views import Register, Login, Reportar, Index, QuienesSomos
+from modulos.appforms.views import Index, QuienesSomos, Register, Login, Logout, Reportar
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('register/', Register, name="register"),
-    path('login/', Login, name="login"),
-    path('reporte/', Reportar, name="reporte"),
     path('index/', Index, name="index"),
     path('quienes-somos/', QuienesSomos, name="quienes-somos"),
+    path('register/', Register, name="register"),
+    path('login/', Login, name="login"),
+    path('logout/', Logout, name = "logout" ),
+    path('reporte/', Reportar, name="reporte"),
 ]

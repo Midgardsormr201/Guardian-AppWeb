@@ -60,6 +60,8 @@
                         <a href="{% url 'login' %}">MI CUENTA</a>
                     </li>
                 </ul>
+                <span>Hola {{request.user}}</span>
+                <span><a href="{% url 'logout' %}">Logout</a>></span>
             </nav>
         </div>
         <div id = 'map'></div>

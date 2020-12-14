@@ -41,9 +41,11 @@
                         <a href="{% url 'login' %}">MI CUENTA</a>
                     </li>
                 </ul>
+                <span name="username">Hola {{request.user}}</span>
+                <span><a href="{% url 'logout' %}">Logout</a>></span>
             </nav>
         </div>
-        <form class="formulario">{% csrf_token %}
+        <form class="formulario" method="POST">{% csrf_token %}
             <h1>REPORTAR</h1>
             <div class="contenedor">
                 <div class="input-contenedor">
@@ -56,12 +58,11 @@
                 </div>
                 <div class="input-contenedor" >
                     <i class="fas fa-comment-alt icon"></i>
-                    <input type="reporte"  placeholder="Detalles del reporte" name="Detalles" required>
+                    <input type="reporte"  placeholder="Detalles del reporte" name="detalles" required>
                 </div>
-                <div class="anonimo">
-                    <h2 class="opciones">Su reporte es anonimo?</h2>
-                    <input type="radio" name="option" required value="1">SI
-                    <input type="radio" name="option" required value="1">NO
+                <div class="input-contenedor">
+                    <h2>{{request.user}} Su reporte es anonimo?</h2>
+                    <input placeholder="SI / NO" name="anonimo">
                 </div>
                 <input type="submit" value="Reportar" class="button">
             </div>
