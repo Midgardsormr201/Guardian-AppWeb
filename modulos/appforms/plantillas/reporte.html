@@ -42,7 +42,7 @@
                     </li>
                 </ul>
                 <span name="username">Hola {{request.user}}</span>
-                <span><a href="{% url 'logout' %}">Logout</a>></span>
+                <span><a href="{% url 'logout' %}">Logout</a></span>
             </nav>
         </div>
         <form class="formulario" method="POST">{% csrf_token %}
@@ -61,8 +61,12 @@
                     <input type="reporte"  placeholder="Detalles del reporte" name="detalles" required>
                 </div>
                 <div class="input-contenedor">
-                    <h2>{{request.user}} Su reporte es anonimo?</h2>
+                    <h2>Su reporte es anonimo?</h2>
                     <input placeholder="SI / NO" name="anonimo">
+                </div>
+                <div class="input-contenedor">
+                    <h2>Nombre de usuario</h2>
+                    <input type="username" name="username" value={{request.user}} readonly="readonly" required>
                 </div>
                 <input type="submit" value="Reportar" class="button">
             </div>

@@ -55,7 +55,7 @@ ROOT_URLCONF = 'guardian.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [r'C:\Users\javie\Desktop\Guardian-AppWeb\modulos\appforms\plantillas'],
+        'DIRS': [r'C:\Users\javie\Desktop\guardian\modulos\appforms\plantillas'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -124,4 +124,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [r'C:\Users\javie\Desktop\Guardian-AppWeb\modulos\appforms\static']
+STATICFILES_DIRS = [r'C:\Users\javie\Desktop\guardian\modulos\appforms\static']

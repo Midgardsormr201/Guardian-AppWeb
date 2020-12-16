@@ -14,15 +14,6 @@ attribution: 'Map data &copy; <a href="http://openstreetmap.org/%22%3EOpenStreet
 maxZoom: 18
 }).addTo(map);
 
-//Función coordenadas
-var c = new L.Control.Coordinates();
-c.addTo(map);
-function onMapClick(e) {
-  c.setCoordinates(e);
-}
-map.on('click', onMapClick);
-//Función coordenadas
-
 //Función buscador
 var osmGeocoder = new L.Control.OSMGeocoder({
 placeholder: 'Buscar Ubicación',
@@ -31,3 +22,13 @@ collapsed: true,
 position: 'topright',
 });
 map.addControl(osmGeocoder);
+//Función buscador
+
+//Función coordenadas
+var c = new L.Control.Coordinates();
+c.addTo(map);
+function onMapClick(e) {
+  c.setCoordinates(e);
+}
+map.on('click', onMapClick);
+//Función coordenadas

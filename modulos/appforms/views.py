@@ -2,9 +2,9 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth.forms import UserCreationForm
 from .forms import CreateUserForm
-from django.contrib import messages
 from django.contrib.auth import authenticate,login, logout
 from django.contrib.auth.decorators import login_required
+from datetime import datetime
 from modulos.appforms.models import reporte
 
 # Create your views here.
@@ -18,7 +18,6 @@ def QuienesSomos(request):
 
 def Register(request):
     form = CreateUserForm()
-
     if request.method == "POST":
         form = CreateUserForm(request.POST)
         if form.is_valid():
@@ -40,14 +39,15 @@ def Login(request):
     context = {}
     return render(request, "login.html", context)
 
+@login_required(login_url='login')
 def Logout(request):
     logout(request)
     return redirect('login')
 
 @login_required(login_url='login')
-def Reportar(request): #REVISAR
+def Reportar(request):
     if request.method == "POST":
-        username = request.user
+        username = request.POST['username']
         latitud = request.POST['latitud']
         longitud = request.POST['longitud']
         detalles = request.POST['detalles']
@@ -56,4 +56,7 @@ def Reportar(request): #REVISAR
             anonimo = True
         elif anonimo == "NO":
             anonimo = False
+        report = reporte(username=username, anonimo=anonimo, latitud=latitud, longitud=longitud, detalles=detalles, fecha=datetime.today().strftime('%Y-%m-%d %H:%M:%S%z'))
+        report.save()
+        return render (request, "index.html")
     return render(request, "reporte.html")
