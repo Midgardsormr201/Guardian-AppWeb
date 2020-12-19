@@ -6,6 +6,7 @@ from django.contrib.auth import authenticate,login, logout
 from django.contrib.auth.decorators import login_required
 from datetime import datetime
 from modulos.appforms.models import reporte
+import csv
 
 # Create your views here.
 
@@ -58,5 +59,8 @@ def Reportar(request):
             anonimo = False
         report = reporte(username=username, anonimo=anonimo, latitud=latitud, longitud=longitud, detalles=detalles, fecha=datetime.today().strftime('%Y-%m-%d %H:%M:%S%z'))
         report.save()
+        with open('Reportes.csv','a', newline='') as f:
+            reportar = csv.writer(f)
+            reportar.writerow([username, anonimo, latitud, longitud, detalles, datetime.today().strftime('%Y-%m-%d %H:%M:%S%z')])
         return render (request, "index.html")
     return render(request, "reporte.html")
