@@ -55,7 +55,7 @@ ROOT_URLCONF = 'guardian.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [r'C:\Users\javie\Desktop\guardian\modulos\appforms\plantillas'],
+        'DIRS': [r'C:\Users\javie\Desktop\test2\guardian\modulos\appforms\plantillas'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'guardian.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'guardian',
+        'NAME': 'test2',
         'USER': 'postgres',
         'PASSWORD': 'guardian-web',
         'HOST': 'localhost',
@@ -124,4 +124,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [r'C:\Users\javie\Desktop\guardian\modulos\appforms\static']
+STATICFILES_DIRS = [r'C:\Users\javie\Desktop\test2\guardian\modulos\appforms\static']
