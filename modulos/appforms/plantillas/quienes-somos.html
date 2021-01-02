@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="shortcut icon" type="LogoGuardian/png" href="{% static 'images/LogoGuardian.png' %}"/>
+        <title>GUARDIAN</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="{% static 'styles/styles.css '%}">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Fugaz+One&family=Lobster&family=Russo+One&display=swap"
+            rel="stylesheet">    
+    </head>
+    <body>
+        <div class="Inicio">
+            <div style="float: left;" class="contenedor-texto">
+                <h1 class="Title">GUARDIAN</h1>
+            </div>
+            <div class="contenedor-imagen">
+                <img src="{% static 'images/LogoGuardian.png' %}" class="App-logo" alt="logo"/>
+            </div>
+        </div>    
+
+        <header class="Eslogan">Tu web segura</header>
+        
+        <div class="container">
+            <nav class="nav-main">
+                <ul class="nav-menu">
+                    <li>
+                        <a href="{% url 'index' %}">INICIO</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'quienes-somos' %}">QUIENES SOMOS</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'reporte' %}">HACER REPORTE</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'login' %}">MI CUENTA</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <h2 class="quienes-somos">Quienes somos</h2>
+        <h4 class='Description'>"Somos alumnos de primer año de Ingeniería Civil Informática, de la Universidad Federico Santa María,
+            y estamos trabajando en un proyecto de ingeniería que dé solución (o ayude a luchar contra ella) a una problemática que siempre
+            ha estado presente, la delincuencia. Además queremos facilitar un método nuevo y eficiente para marcar zonas de riesgo.
+            Para lograr todo esto, aplicaremos todos los conocimientos que nos han brindado en el tiempo que llevamos siendo parte de esta
+            institución."
+        </h4>
+</body>
+</html>    
