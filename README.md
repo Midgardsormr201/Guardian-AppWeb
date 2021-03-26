@@ -3,8 +3,10 @@ Este proyecto corresponde al ramo de Introducción a la ingeniería de la Univer
 
 #Ejecutar
 La aplicación funcionará en el puerto 8000
-**NODE
+
+**NODE**
 Primero debe compilar con:
 ```$ npm install```
+
 Luego se ejecuta:
 ```$ npm start```
